@@ -6,12 +6,37 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#000000',
-        secondary: '#ffffff',
-        accent: '#666666',
+        primary: '#2C0412',        // Deep burgundy (main text)
+        secondary: '#fffbe1ff',      // Warm cream (background)
+        accent: '#FFE500',         // Bright yellow (highlights)
+        'dark-bg': '#100A0D',      // Dark mode background
+        'dark-text': '#BAB5B8',    // Dark mode secondary text
+        'burgundy': {
+          50: '#FFF5F7',
+          100: '#FFE5EB',
+          200: '#FFCCD9',
+          300: '#FF99B3',
+          400: '#FF6688',
+          500: '#FF3366',
+          600: '#E6004D',
+          700: '#B30039',
+          800: '#800029',
+          900: '#2C0412',
+        },
+        'canary': {
+          50: '#FFFEF5',
+          100: '#FFFDEB',
+          200: '#FFF9C2',
+          300: '#FFE500',
+          400: '#FFD700',
+          500: '#FFC700',
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Gabarito', 'Inter', 'system-ui', 'sans-serif'],
+        tight: ['Inter Tight', 'Inter', 'sans-serif'],
+        handwriting: ['Architects Daughter', 'cursive'],
+        script: ['Marck Script', 'cursive'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',

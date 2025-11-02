@@ -1,21 +1,10 @@
-/* Technologies Section Styles */
+/* Technologies component specific styles - common styles moved to global styles.css */
 
 .tech-category {
   position: relative;
 }
 
-/* Number hover effect */
-.tech-category:hover .text-gray-300 {
-  color: #000;
-  transition: color 0.3s ease;
-}
-
 /* Technology badge animations */
 .tech-category span {
   transition: all 0.3s ease;
-}
-
-.tech-category span:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

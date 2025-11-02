@@ -1,4 +1,4 @@
-<section class="min-h-screen section-padding bg-white flex items-center">
+<section class="min-h-screen section-padding bg-secondary flex items-center">
   <div class="container-custom w-full">
     <!-- Section Header -->
     <h2 
@@ -22,10 +22,10 @@
           [class.opacity-100]="sectionVisible"
           [class.translate-y-0]="sectionVisible"
         >
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-3">Email</h3>
+          <h3 class="text-sm uppercase tracking-widest text-primary/50 mb-3 font-handwriting">Email</h3>
           <a 
             [href]="'mailto:' + email"
-            class="text-2xl md:text-3xl font-bold text-gray-900 hover:text-gray-600 transition-colors duration-300 inline-block hover-underline"
+            class="text-2xl md:text-3xl font-bold text-primary hover:text-accent transition-colors duration-300 inline-block hover-underline"
           >
             {{ email }}
           </a>
@@ -40,10 +40,10 @@
           [class.opacity-100]="sectionVisible"
           [class.translate-y-0]="sectionVisible"
         >
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-3">Phone</h3>
+          <h3 class="text-sm uppercase tracking-widest text-primary/50 mb-3 font-handwriting">Phone</h3>
           <a 
             [href]="'tel:' + phone"
-            class="text-2xl md:text-3xl font-bold text-gray-900 hover:text-gray-600 transition-colors duration-300 inline-block"
+            class="text-2xl md:text-3xl font-bold text-primary hover:text-accent transition-colors duration-300 inline-block"
           >
             {{ phone }}
           </a>
@@ -58,8 +58,8 @@
           [class.opacity-100]="sectionVisible"
           [class.translate-y-0]="sectionVisible"
         >
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-3">Location</h3>
-          <p class="text-2xl md:text-3xl font-bold text-gray-900">
+          <h3 class="text-sm uppercase tracking-widest text-primary/50 mb-3 font-handwriting">Location</h3>
+          <p class="text-2xl md:text-3xl font-bold text-primary">
             {{ location }}
           </p>
         </div>
@@ -72,14 +72,14 @@
           [class.opacity-100]="sectionVisible"
           [class.translate-y-0]="sectionVisible"
         >
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-4">Follow Me</h3>
+          <h3 class="text-sm uppercase tracking-widest text-primary/50 mb-4 font-handwriting">Follow Me</h3>
           <div class="flex flex-wrap gap-4">
             <a 
               *ngFor="let social of socialLinks"
               [href]="social.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-lg font-medium text-gray-900 hover:text-gray-600 transition-all duration-300 hover-underline"
+              class="text-lg font-medium text-primary hover:text-accent transition-all duration-300 hover-underline"
               [class.opacity-0]="!social.visible"
               [class.opacity-100]="social.visible"
             >
@@ -100,7 +100,7 @@
         <form (ngSubmit)="onSubmit()" class="space-y-6">
           <!-- Name -->
           <div class="form-group">
-            <label for="name" class="block text-sm uppercase tracking-widest text-gray-500 mb-2">
+            <label for="name" class="block text-sm uppercase tracking-widest text-primary/50 mb-2 font-handwriting">
               Your Name
             </label>
             <input
@@ -109,14 +109,14 @@
               [(ngModel)]="formData.name"
               name="name"
               required
-              class="w-full px-0 py-3 text-lg border-0 border-b-2 border-gray-300 focus:border-gray-900 focus:outline-none transition-colors duration-300 bg-transparent"
+              class="w-full px-0 py-3 text-lg border-0 border-b-2 border-primary/30 focus:border-accent focus:outline-none transition-colors duration-300 bg-transparent text-primary"
               placeholder="John Doe"
             />
           </div>
 
           <!-- Email -->
           <div class="form-group">
-            <label for="email" class="block text-sm uppercase tracking-widest text-gray-500 mb-2">
+            <label for="email" class="block text-sm uppercase tracking-widest text-primary/50 mb-2 font-handwriting">
               Your Email
             </label>
             <input
@@ -125,14 +125,14 @@
               [(ngModel)]="formData.email"
               name="email"
               required
-              class="w-full px-0 py-3 text-lg border-0 border-b-2 border-gray-300 focus:border-gray-900 focus:outline-none transition-colors duration-300 bg-transparent"
+              class="w-full px-0 py-3 text-lg border-0 border-b-2 border-primary/30 focus:border-accent focus:outline-none transition-colors duration-300 bg-transparent text-primary"
               placeholder="john@example.com"
             />
           </div>
 
           <!-- Message -->
           <div class="form-group">
-            <label for="message" class="block text-sm uppercase tracking-widest text-gray-500 mb-2">
+            <label for="message" class="block text-sm uppercase tracking-widest text-primary/50 mb-2 font-handwriting">
               Message
             </label>
             <textarea
@@ -141,7 +141,7 @@
               name="message"
               required
               rows="5"
-              class="w-full px-0 py-3 text-lg border-0 border-b-2 border-gray-300 focus:border-gray-900 focus:outline-none transition-colors duration-300 bg-transparent resize-none"
+              class="w-full px-0 py-3 text-lg border-0 border-b-2 border-primary/30 focus:border-accent focus:outline-none transition-colors duration-300 bg-transparent resize-none text-primary"
               placeholder="Tell me about your project..."
             ></textarea>
           </div>

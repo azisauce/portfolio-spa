@@ -1,17 +1,7 @@
+/* Career component specific styles - common styles moved to global styles.css */
 
 .career-item {
   position: relative;
-}
-
-/* Hover effect for career items */
-.career-item:hover .text-gray-300 {
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-/* Stagger delays for animations */
-.delay-700 {
-  transition-delay: 0.7s;
 }
 
 /* Smooth transitions for all text elements */

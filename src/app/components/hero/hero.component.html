@@ -1,6 +1,6 @@
 <section 
   #heroSection
-  class="min-h-screen flex flex-col justify-center section-padding relative bg-white"
+  class="min-h-screen flex flex-col justify-center section-padding relative bg-secondary"
 >
   <div class="container-custom">
     <!-- Name - Large Typography -->
@@ -16,7 +16,7 @@
 
     <!-- Role/Title -->
     <h2 
-      class="heading-lg mb-12 text-gray-600 transition-all duration-1000 ease-out delay-200"
+      class="heading-lg mb-12 text-primary/70 transition-all duration-1000 ease-out delay-200"
       [class.opacity-0]="!roleVisible"
       [class.translate-y-8]="!roleVisible"
       [class.opacity-100]="roleVisible"
@@ -27,7 +27,7 @@
 
     <!-- Tagline/Description -->
     <p 
-      class="text-xl md:text-2xl max-w-3xl mb-12 leading-relaxed text-gray-700 transition-all duration-1000 ease-out delay-500"
+      class="text-xl md:text-2xl max-w-3xl mb-12 leading-relaxed text-primary/80 transition-all duration-1000 ease-out delay-500"
       [class.opacity-0]="!taglineVisible"
       [class.translate-y-8]="!taglineVisible"
       [class.opacity-100]="taglineVisible"
@@ -52,7 +52,7 @@
   <!-- Scroll Indicator -->
   <button 
     (click)="scrollToNext()"
-    class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer group"
+    class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/40 hover:text-accent transition-colors cursor-pointer group"
     aria-label="Scroll to next section"
   >
     <span class="text-sm tracking-widest uppercase">Scroll</span>

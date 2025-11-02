@@ -1,3 +1,9 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,10 +17,20 @@
   body {
     @apply font-sans text-primary bg-secondary;
   }
+  
+  /* Selection color */
+  ::selection {
+    @apply bg-accent/40 text-primary;
+  }
+  
+  ::-moz-selection {
+    @apply bg-accent/40 text-primary;
+  }
 }
 
 /* Custom component styles */
 @layer components {
+  /* Layout utilities */
   .section-padding {
     @apply px-6 py-20 md:px-12 lg:px-24 xl:px-32;
   }
@@ -23,6 +39,7 @@
     @apply max-w-7xl mx-auto;
   }
   
+  /* Typography */
   .heading-xl {
     @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight;
   }
@@ -31,7 +48,162 @@
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
   
+  /* Buttons */
   .btn-primary {
-    @apply px-8 py-4 bg-primary text-secondary hover:bg-accent transition-colors duration-300;
+    @apply px-8 py-4 bg-primary text-secondary hover:bg-accent hover:text-primary transition-all duration-300;
+    border: 2px solid transparent;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 229, 0, 0.3);
+    border-color: currentColor;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-primary text-primary hover:bg-accent hover:border-accent transition-all duration-300;
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 4, 18, 0.2);
+  }
+  
+  /* Animation delays */
+  .delay-200 {
+    transition-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    transition-delay: 0.3s;
+  }
+  
+  .delay-400 {
+    transition-delay: 0.4s;
+  }
+  
+  .delay-500 {
+    transition-delay: 0.5s;
+  }
+  
+  .delay-700 {
+    transition-delay: 0.7s;
+  }
+  
+  /* Common hover effects */
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 229, 0, 0.2);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.1);
+  }
+  
+  .hover-text-dark:hover .text-gray-300 {
+    @apply text-accent;
+    transition: color 0.3s ease;
+  }
+  
+  /* Creative text styles */
+  .text-accent-handwriting {
+    @apply font-handwriting text-accent;
+  }
+  
+  .text-script {
+    @apply font-script;
+  }
+  
+  /* Highlight effect */
+  .text-highlight {
+    @apply relative inline-block;
+  }
+  
+  .text-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0.2em;
+    left: -0.1em;
+    right: -0.1em;
+    height: 0.3em;
+    background-color: rgba(255, 229, 0, 0.3);
+    z-index: -1;
+    transform: skewX(-12deg);
+  }
+  
+  /* Animated underline effect */
+  .hover-underline {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFE500;
+    transition: width 0.3s ease;
+  }
+  
+  .hover-underline:hover {
+    color: #FFE500;
+  }
+  
+  .hover-underline:hover::after {
+    width: 100%;
+  }
+  
+  /* Project card styles */
+  .project-card {
+    cursor: pointer;
+  }
+  
+  .project-card img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project-card span {
+    transition: all 0.3s ease;
+  }
+  
+  /* Link arrow animation */
+  .group\/link:hover svg {
+    transform: translateX(4px);
+  }
+  
+  /* Form inputs */
+  input:focus,
+  textarea:focus {
+    @apply border-primary;
+  }
+  
+  /* Remove autofill background */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
