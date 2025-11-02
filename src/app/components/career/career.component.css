@@ -1,0 +1,34 @@
+
+.career-item {
+  position: relative;
+}
+
+/* Hover effect for career items */
+.career-item:hover .text-gray-300 {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* Stagger delays for animations */
+.delay-700 {
+  transition-delay: 0.7s;
+}
+
+/* Smooth transitions for all text elements */
+.career-item h3,
+.career-item p {
+  transition: color 0.3s ease;
+}
+
+/* Download button hover effect */
+a[download]:hover svg {
+  transform: translateY(2px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .career-item {
+    padding-left: 0;
+  }
+}

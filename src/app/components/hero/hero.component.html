@@ -1,1 +1,73 @@
-<p>hero works!</p>
+<section 
+  #heroSection
+  class="min-h-screen flex flex-col justify-center section-padding relative bg-white"
+>
+  <div class="container-custom">
+    <!-- Name - Large Typography -->
+    <h1 
+      class="heading-xl mb-4 transition-all duration-1000 ease-out"
+      [class.opacity-0]="!nameVisible"
+      [class.translate-y-8]="!nameVisible"
+      [class.opacity-100]="nameVisible"
+      [class.translate-y-0]="nameVisible"
+    >
+      {{ name }}
+    </h1>
+
+    <!-- Role/Title -->
+    <h2 
+      class="heading-lg mb-12 text-gray-600 transition-all duration-1000 ease-out delay-200"
+      [class.opacity-0]="!roleVisible"
+      [class.translate-y-8]="!roleVisible"
+      [class.opacity-100]="roleVisible"
+      [class.translate-y-0]="roleVisible"
+    >
+      {{ role }}
+    </h2>
+
+    <!-- Tagline/Description -->
+    <p 
+      class="text-xl md:text-2xl max-w-3xl mb-12 leading-relaxed text-gray-700 transition-all duration-1000 ease-out delay-500"
+      [class.opacity-0]="!taglineVisible"
+      [class.translate-y-8]="!taglineVisible"
+      [class.opacity-100]="taglineVisible"
+      [class.translate-y-0]="taglineVisible"
+    >
+      {{ tagline }}
+    </p>
+
+    <!-- CTA Button -->
+    <a 
+      [href]="ctaLink"
+      class="inline-block btn-primary transition-all duration-1000 ease-out delay-700 hover:scale-105"
+      [class.opacity-0]="!ctaVisible"
+      [class.scale-95]="!ctaVisible"
+      [class.opacity-100]="ctaVisible"
+      [class.scale-100]="ctaVisible"
+    >
+      {{ ctaText }}
+    </a>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <button 
+    (click)="scrollToNext()"
+    class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer group"
+    aria-label="Scroll to next section"
+  >
+    <span class="text-sm tracking-widest uppercase">Scroll</span>
+    <svg 
+      class="w-6 h-6 animate-bounce group-hover:translate-y-1 transition-transform" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2" 
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+      />
+    </svg>
+  </button>
+</section>

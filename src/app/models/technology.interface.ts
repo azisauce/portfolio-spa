@@ -1,7 +1,12 @@
+export interface TechCategory {
+  number: string;
+  title: string;
+  technologies: string[];
+}
+
 export interface Technology {
   id: string;
   name: string;
   category: 'frontend' | 'backend' | 'design' | 'tools';
-  icon?: string;
-  proficiency: number; // 1-5
+  proficiency?: number;
 }

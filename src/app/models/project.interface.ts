@@ -6,5 +6,4 @@ export interface Project {
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
-  featured: boolean;
 }

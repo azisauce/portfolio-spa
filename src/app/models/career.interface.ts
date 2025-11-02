@@ -5,5 +5,5 @@ export interface Career {
   company: string;
   period: string;
   description: string;
-  technologies: string[];
+  technologies?: string[];
 }

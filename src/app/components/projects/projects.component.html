@@ -1,1 +1,90 @@
-<p>projects works!</p>
+<section class="min-h-screen section-padding bg-white">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <h2 
+      class="heading-lg mb-20 transition-all duration-1000 ease-out"
+      [class.opacity-0]="!sectionVisible"
+      [class.translate-y-8]="!sectionVisible"
+      [class.opacity-100]="sectionVisible"
+      [class.translate-y-0]="sectionVisible"
+    >
+      PROJECTS
+    </h2>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+      <div 
+        *ngFor="let project of projects"
+        class="project-card group transition-all duration-1000 ease-out"
+        [class.opacity-0]="!project.visible"
+        [class.translate-y-8]="!project.visible"
+        [class.opacity-100]="project.visible"
+        [class.translate-y-0]="project.visible"
+      >
+        <!-- Project Image -->
+        <div class="relative overflow-hidden bg-gray-100 mb-6 aspect-[4/3]">
+          <img 
+            [src]="project.image" 
+            [alt]="project.title"
+            class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          />
+          
+          <!-- Overlay on hover -->
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="space-y-4">
+          <!-- Title -->
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900">
+            {{ project.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+            {{ project.description }}
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2">
+            <span 
+              *ngFor="let tag of project.tags"
+              class="px-3 py-1 text-sm bg-gray-100 text-gray-700 hover:bg-gray-900 hover:text-white transition-colors duration-300"
+            >
+              {{ tag }}
+            </span>
+          </div>
+
+          <!-- Links -->
+          <div class="flex gap-4 pt-2">
+            <a 
+              *ngIf="project.liveUrl"
+              [href]="project.liveUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors font-medium group/link"
+            >
+              <span>View Live</span>
+              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+
+            <a 
+              *ngIf="project.githubUrl"
+              [href]="project.githubUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors font-medium group/link"
+            >
+              <span>GitHub</span>
+              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
