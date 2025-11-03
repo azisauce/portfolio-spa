@@ -14,39 +14,46 @@ export class DataService {
     {
       id: '1',
       number: '01',
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Company Inc.',
-      period: '2023 - Present',
-      description: 'Leading development of enterprise web applications using Angular, React, and Node.js.',
-      technologies: ['Angular', 'Node.js', 'TypeScript']
+      title: 'Software Engineer',
+      company: 'Drivago',
+      period: 'Oct 2025 - Present',
+      description:
+        'Engineering high-performance web solutions through scalable architecture, clean code, and thoughtful design. Focused on delivering smooth user experiences and maintainable systems.',
+      technologies: ['Angular', 'NestJS', 'PostgreSQL', 'Caching Mechanism']
     },
     {
       id: '2',
       number: '02',
-      title: 'Full Stack Developer',
-      company: 'Digital Agency Co.',
-      period: '2021 - 2023',
-      description: 'Built and maintained multiple client projects.',
-      technologies: ['React', 'Express', 'MongoDB']
+      title: 'Part-Time Software Engineer',
+      company: 'Drivago',
+      period: 'Sep 2024 - Oct 2025',
+      description:
+        'Enhanced API and database efficiency, cutting load times by 30%. Introduced smart caching to balance system load and boost response speeds across key endpoints.',
+      technologies: ['Node.js', 'PostgreSQL', 'Caching Mechanism']
     },
     {
       id: '3',
       number: '03',
-      title: 'Frontend Developer',
-      company: 'Startup XYZ',
-      period: '2019 - 2021',
-      description: 'Developed user interfaces and interactive experiences.',
-      technologies: ['Vue.js', 'CSS3', 'JavaScript']
+      title: 'Software Engineering Trainee',
+      company: 'Drivago',
+      period: 'Jun 2024 - Aug 2024',
+      description:
+        'Enhanced API and database efficiency, cutting load times by 30%. Introduced smart caching to balance system load and boost response speeds across key endpoints.',
+      technologies: ['Node.js', 'PostgreSQL', 'Caching Mechanism']
     },
     {
       id: '4',
       number: '04',
-      title: 'Computer Science Degree',
-      company: 'University Name',
-      period: '2015 - 2019',
-      description: 'Bachelor of Science in Computer Science.'
-    }
+      title: 'Part-Time Software Engineer',
+      company: 'E-RIVEZ',
+      period: 'Jun 2024 - Jul 2024',
+      description:
+        'Built responsive and scalable web interfaces using Angular and NestJS. Collaborated closely with backend teams to ensure seamless data flow and maintainable architecture.',
+      technologies: ['Angular', 'NestJS', 'TypeScript']
+    },
   ];
+
+
 
   // PROJECTS DATA
   private projectsData: Project[] = [

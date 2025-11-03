@@ -1,0 +1,87 @@
+<section class="min-h-screen section-padding bg-secondary">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <h2 
+      class="heading-lg mb-16 transition-all duration-1000 ease-out"
+      [class.opacity-0]="!sectionVisible"
+      [class.translate-y-8]="!sectionVisible"
+      [class.opacity-100]="sectionVisible"
+      [class.translate-y-0]="sectionVisible"
+    >
+      EDUCATION
+    </h2>
+
+    <!-- Education Story -->
+    <div class="max-w-4xl">
+      <!-- University & Degree -->
+      <div 
+        class="mb-8 transition-all duration-1000 ease-out"
+        [class.opacity-0]="!sectionVisible"
+        [class.translate-x-[-30px]]="!sectionVisible"
+        [class.opacity-100]="sectionVisible"
+        [class.translate-x-0]="sectionVisible"
+      >
+        <h3 class="text-3xl md:text-4xl font-bold text-primary mb-2">
+          {{ degree }}
+        </h3>
+        <p class="text-xl md:text-2xl text-accent font-medium mb-1">
+          {{ university }}
+        </p>
+        <p class="text-base md:text-lg text-primary/50 tracking-wider uppercase font-handwriting">
+          {{ period }}
+        </p>
+      </div>
+
+      <!-- Story Paragraph -->
+      <p 
+        class="text-lg md:text-xl leading-relaxed text-primary/80 mb-16 transition-all duration-1000 ease-out delay-300"
+        [class.opacity-0]="!storyVisible"
+        [class.translate-y-8]="!storyVisible"
+        [class.opacity-100]="storyVisible"
+        [class.translate-y-0]="storyVisible"
+      >
+        {{ story }}
+      </p>
+
+      <!-- Key Highlights Grid -->
+      <div 
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-1000 ease-out delay-500"
+        [class.opacity-0]="!highlightsVisible"
+        [class.opacity-100]="highlightsVisible"
+      >
+        <div 
+          *ngFor="let highlight of highlights; let i = index"
+          class="highlight-card p-6 rounded-lg bg-primary/5 border border-primary/10 hover:border-accent/30 transition-all duration-500 ease-out"
+          [style.transition-delay]="(i * 150) + 'ms'"
+          [class.translate-y-8]="!highlightsVisible"
+          [class.translate-y-0]="highlightsVisible"
+        >
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg 
+              class="w-8 h-8 text-accent" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2" 
+                [attr.d]="getIconPath(highlight.icon)"
+              />
+            </svg>
+          </div>
+
+          <!-- Content -->
+          <h4 class="text-xl font-bold text-primary mb-2">
+            {{ highlight.title }}
+          </h4>
+          <p class="text-base text-primary/70 leading-relaxed">
+            {{ highlight.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

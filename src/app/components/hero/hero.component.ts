@@ -14,9 +14,9 @@ export class HeroComponent implements OnInit {
   // Your portfolio data - UPDATE THESE WITH YOUR INFO
   name = 'AZIZ TURKI';
   role = 'SOFTWARE ENGINEER';
-  tagline = 'Through strategic art direction and webdesign I help companies around the world grow their business.';
-  ctaText = 'hello@yourname.com';
-  ctaLink = 'mailto:hello@yourname.com';
+  tagline = 'Blending software engineering and design to craft refined digital experiences that empower businesses.';
+  ctaText = 'Contact me';
+  ctaLink = 'mailto:mohamedaziz.torki@supcom.tn';
   
   // Animation states
   nameVisible = false;
